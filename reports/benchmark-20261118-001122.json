@@ -1,0 +1,449 @@
+{
+  "generated_at": "2026-11-17T18:40:23.140977+00:00",
+  "environment": {
+    "host": {
+      "os": "Linux",
+      "os_version": "Fedora Linux 44 (Workstation Edition)",
+      "arch": "x86_64",
+      "cpu": "12th Gen Intel(R) Core(TM) i5-12500H",
+      "physical_cores": 12,
+      "logical_cores": 16,
+      "ram_bytes": 16422989824,
+      "gpus": [
+        {
+          "index": 0,
+          "name": "NVIDIA Corporation GA107BM [GeForce RTX 3050 Mobile] (rev a1)",
+          "vendor": "NVIDIA",
+          "total_mb": 0,
+          "used_mb": 0,
+          "free_mb": 0,
+          "utilization": null,
+          "temperature_c": null,
+          "driver": "",
+          "cuda": false,
+          "backend": "cpu"
+        }
+      ],
+      "backend": "cpu",
+      "warnings": [
+        "No CUDA/Metal GPU detected; inference will use the CPU backend."
+      ]
+    },
+    "llama_version": "version: 1.0.0-dev (build 12477, commit 054a1babf)",
+    "python": "3.12.16",
+    "models_registered": [
+      "qwen2.5-coder-7b",
+      "qwen2.5-coder-3b",
+      "qwen3.5-2b",
+      "smollm3-3b"
+    ],
+    "resident_limit": 2,
+    "public_url": "http://127.0.0.1:8000/v1"
+  },
+  "models": {
+    "qwen2.5-coder-7b": {
+      "id": "qwen2.5-coder-7b",
+      "name": "Qwen2.5 Coder 7B",
+      "parameter_size": "7B",
+      "quantization": "Q4_K_M",
+      "file_size_bytes": 4683073696,
+      "context_length": 8192,
+      "cold_load_ms": 3198.53,
+      "unload_ms": 344.53,
+      "memory": {
+        "rss_bytes": 8745701376,
+        "estimated_ram_bytes": 6161733138,
+        "estimated_vram_bytes": 0,
+        "load_count": 1,
+        "crash_count": 0
+      },
+      "stream": {
+        "ttft": {
+          "count": 3,
+          "min_ms": 95.86,
+          "median_ms": 96.91,
+          "mean_ms": 225.95,
+          "p95_ms": 485.09,
+          "max_ms": 485.09
+        },
+        "completion_tokens_per_second": {
+          "median": 11.22,
+          "mean": 11.21
+        },
+        "request_duration": {
+          "count": 3,
+          "min_ms": 2936.68,
+          "median_ms": 2949.17,
+          "mean_ms": 3081.26,
+          "p95_ms": 3357.92,
+          "max_ms": 3357.92
+        },
+        "runs": [
+          {
+            "ttft_ms": 485.09,
+            "total_ms": 3357.92,
+            "completion_tokens": 32,
+            "prompt_tokens": 18,
+            "tokens_per_second": 11.14,
+            "text": "CPU cache locality matters for inference because it reduces the time spent waiting for data to be fetched from slower memory, thereby speeding up the processing of data by keeping frequently"
+          },
+          {
+            "ttft_ms": 95.86,
+            "total_ms": 2936.68,
+            "completion_tokens": 32,
+            "prompt_tokens": 1,
+            "tokens_per_second": 11.26,
+            "text": "CPU cache locality matters for inference because it reduces the time spent waiting for data to be fetched from slower memory, thereby speeding up the processing of data by keeping frequently"
+          },
+          {
+            "ttft_ms": 96.91,
+            "total_ms": 2949.17,
+            "completion_tokens": 32,
+            "prompt_tokens": 1,
+            "tokens_per_second": 11.22,
+            "text": "CPU cache locality matters for inference because it reduces the time spent waiting for data to be fetched from slower memory, thereby speeding up the processing of data by keeping frequently"
+          }
+        ]
+      },
+      "nonstream": {
+        "request_duration": {
+          "count": 3,
+          "min_ms": 2928.23,
+          "median_ms": 2931.41,
+          "mean_ms": 2944.32,
+          "p95_ms": 2973.31,
+          "max_ms": 2973.31
+        },
+        "runs": [
+          {
+            "total_ms": 2928.23,
+            "completion_tokens": 32,
+            "prompt_tokens": 42,
+            "queue_ms": 0.0,
+            "load_ms": 0.03,
+            "model": "qwen2.5-coder-7b"
+          },
+          {
+            "total_ms": 2931.41,
+            "completion_tokens": 32,
+            "prompt_tokens": 42,
+            "queue_ms": 0.0,
+            "load_ms": 0.03,
+            "model": "qwen2.5-coder-7b"
+          },
+          {
+            "total_ms": 2973.31,
+            "completion_tokens": 32,
+            "prompt_tokens": 42,
+            "queue_ms": 0.0,
+            "load_ms": 0.06,
+            "model": "qwen2.5-coder-7b"
+          }
+        ]
+      }
+    },
+    "qwen3.5-2b": {
+      "id": "qwen3.5-2b",
+      "name": "Qwen3.5 2B",
+      "parameter_size": "2B",
+      "quantization": "Q4_K_M",
+      "file_size_bytes": 1270808448,
+      "context_length": 8192,
+      "cold_load_ms": 1435.31,
+      "unload_ms": 199.49,
+      "memory": {
+        "rss_bytes": 2205536256,
+        "estimated_ram_bytes": 2505611545,
+        "estimated_vram_bytes": 0,
+        "load_count": 2,
+        "crash_count": 0
+      },
+      "stream": {
+        "ttft": {
+          "count": 3,
+          "min_ms": 59.08,
+          "median_ms": 66.35,
+          "mean_ms": 108.57,
+          "p95_ms": 200.27,
+          "max_ms": 200.27
+        },
+        "completion_tokens_per_second": {
+          "median": 29.64,
+          "mean": 29.54
+        },
+        "request_duration": {
+          "count": 3,
+          "min_ms": 1140.02,
+          "median_ms": 1155.55,
+          "mean_ms": 1191.79,
+          "p95_ms": 1279.81,
+          "max_ms": 1279.81
+        },
+        "runs": [
+          {
+            "ttft_ms": 200.27,
+            "total_ms": 1279.81,
+            "completion_tokens": 32,
+            "prompt_tokens": 25,
+            "tokens_per_second": 29.64,
+            "text": "CPU cache locality is critical for inference because it determines how efficiently the processor can access the data it needs to perform calculations, directly impacting the overall speed and throughput of"
+          },
+          {
+            "ttft_ms": 66.35,
+            "total_ms": 1140.02,
+            "completion_tokens": 32,
+            "prompt_tokens": 4,
+            "tokens_per_second": 29.8,
+            "text": "CPU cache locality is critical for inference because it determines how efficiently the processor can access the data it needs to perform calculations, directly impacting the overall speed and throughput of"
+          },
+          {
+            "ttft_ms": 59.08,
+            "total_ms": 1155.55,
+            "completion_tokens": 32,
+            "prompt_tokens": 4,
+            "tokens_per_second": 29.18,
+            "text": "CPU cache locality is critical for inference because it determines how efficiently the processor can access the data it needs to perform calculations, directly impacting the overall speed and throughput of"
+          }
+        ]
+      },
+      "nonstream": {
+        "request_duration": {
+          "count": 3,
+          "min_ms": 1128.16,
+          "median_ms": 1129.1,
+          "mean_ms": 1128.83,
+          "p95_ms": 1129.24,
+          "max_ms": 1129.24
+        },
+        "runs": [
+          {
+            "total_ms": 1128.16,
+            "completion_tokens": 32,
+            "prompt_tokens": 25,
+            "queue_ms": 0.0,
+            "load_ms": 0.06,
+            "model": "qwen3.5-2b"
+          },
+          {
+            "total_ms": 1129.1,
+            "completion_tokens": 32,
+            "prompt_tokens": 25,
+            "queue_ms": 0.0,
+            "load_ms": 0.06,
+            "model": "qwen3.5-2b"
+          },
+          {
+            "total_ms": 1129.24,
+            "completion_tokens": 32,
+            "prompt_tokens": 25,
+            "queue_ms": 0.0,
+            "load_ms": 0.03,
+            "model": "qwen3.5-2b"
+          }
+        ]
+      }
+    },
+    "smollm3-3b": {
+      "id": "smollm3-3b",
+      "name": "SmolLM3 3B",
+      "parameter_size": "3B",
+      "quantization": "Q4_K_M",
+      "file_size_bytes": 1915306528,
+      "context_length": 8192,
+      "cold_load_ms": 2493.06,
+      "unload_ms": 252.95,
+      "memory": {
+        "rss_bytes": 3866628096,
+        "estimated_ram_bytes": 2908517715,
+        "estimated_vram_bytes": 0,
+        "load_count": 1,
+        "crash_count": 0
+      },
+      "stream": {
+        "ttft": {
+          "count": 3,
+          "min_ms": 46.28,
+          "median_ms": 46.33,
+          "mean_ms": 119.83,
+          "p95_ms": 266.89,
+          "max_ms": 266.89
+        },
+        "completion_tokens_per_second": {
+          "median": 23.52,
+          "mean": 23.51
+        },
+        "request_duration": {
+          "count": 3,
+          "min_ms": 1402.92,
+          "median_ms": 1411.85,
+          "mean_ms": 1480.71,
+          "p95_ms": 1627.36,
+          "max_ms": 1627.36
+        },
+        "runs": [
+          {
+            "ttft_ms": 266.89,
+            "total_ms": 1627.36,
+            "completion_tokens": 32,
+            "prompt_tokens": 22,
+            "tokens_per_second": 23.52,
+            "text": "\nCPU cache locality matters for inference because it significantly impacts the performance of neural networks by reducing the number of memory accesses required, which minimizes latency and improves overall efficiency"
+          },
+          {
+            "ttft_ms": 46.33,
+            "total_ms": 1411.85,
+            "completion_tokens": 32,
+            "prompt_tokens": 1,
+            "tokens_per_second": 23.43,
+            "text": "\nCPU cache locality matters for inference because it significantly impacts the performance of deep learning models by reducing the time spent accessing memory, allowing the model to process data more efficiently"
+          },
+          {
+            "ttft_ms": 46.28,
+            "total_ms": 1402.92,
+            "completion_tokens": 32,
+            "prompt_tokens": 1,
+            "tokens_per_second": 23.59,
+            "text": "\nCPU cache locality matters for inference because it significantly impacts the performance of deep learning models by reducing the time spent accessing memory, allowing the model to process data more efficiently"
+          }
+        ]
+      },
+      "nonstream": {
+        "request_duration": {
+          "count": 3,
+          "min_ms": 1408.72,
+          "median_ms": 1431.41,
+          "mean_ms": 1433.94,
+          "p95_ms": 1461.69,
+          "max_ms": 1461.69
+        },
+        "runs": [
+          {
+            "total_ms": 1431.41,
+            "completion_tokens": 32,
+            "prompt_tokens": 81,
+            "queue_ms": 0.0,
+            "load_ms": 0.05,
+            "model": "smollm3-3b"
+          },
+          {
+            "total_ms": 1461.69,
+            "completion_tokens": 32,
+            "prompt_tokens": 81,
+            "queue_ms": 0.0,
+            "load_ms": 0.07,
+            "model": "smollm3-3b"
+          },
+          {
+            "total_ms": 1408.72,
+            "completion_tokens": 32,
+            "prompt_tokens": 81,
+            "queue_ms": 0.0,
+            "load_ms": 0.05,
+            "model": "smollm3-3b"
+          }
+        ]
+      }
+    }
+  },
+  "concurrency": [
+    {
+      "model": "qwen3.5-2b",
+      "concurrency": 1,
+      "wall_ms": 1015.26,
+      "successes": 1,
+      "errors": 0,
+      "aggregate_tokens_per_second": 23.64,
+      "request_latency": {
+        "count": 1,
+        "min_ms": 1004.76,
+        "median_ms": 1004.76,
+        "mean_ms": 1004.76,
+        "p95_ms": 1004.76,
+        "max_ms": 1004.76
+      },
+      "queue_ms": [
+        0.0
+      ],
+      "load_ms": [
+        0.06
+      ]
+    },
+    {
+      "model": "qwen3.5-2b",
+      "concurrency": 2,
+      "wall_ms": 1313.7,
+      "successes": 2,
+      "errors": 0,
+      "aggregate_tokens_per_second": 36.54,
+      "request_latency": {
+        "count": 2,
+        "min_ms": 1274.27,
+        "median_ms": 1293.55,
+        "mean_ms": 1293.55,
+        "p95_ms": 1312.84,
+        "max_ms": 1312.84
+      },
+      "queue_ms": [
+        0.0,
+        0.0
+      ],
+      "load_ms": [
+        0.05,
+        0.03
+      ]
+    },
+    {
+      "model": "qwen3.5-2b",
+      "concurrency": 4,
+      "wall_ms": 2492.5,
+      "successes": 4,
+      "errors": 0,
+      "aggregate_tokens_per_second": 38.52,
+      "request_latency": {
+        "count": 4,
+        "min_ms": 1134.95,
+        "median_ms": 1812.98,
+        "mean_ms": 1812.95,
+        "p95_ms": 2490.89,
+        "max_ms": 2490.89
+      },
+      "queue_ms": [
+        0.0,
+        0.0,
+        1129.23,
+        1129.55
+      ],
+      "load_ms": [
+        0.06,
+        0.04,
+        0.05,
+        0.04
+      ]
+    }
+  ],
+  "switching": {
+    "first": "qwen2.5-coder-7b",
+    "second": "qwen3.5-2b",
+    "transitions": [
+      {
+        "from": "qwen3.5-2b",
+        "to": "qwen2.5-coder-7b",
+        "request_ms": 6791.64,
+        "load_ms": 5817.25
+      },
+      {
+        "from": "qwen2.5-coder-7b",
+        "to": "qwen3.5-2b",
+        "request_ms": 2060.68,
+        "load_ms": 1798.49
+      }
+    ],
+    "median_transition_ms": 4426.16
+  },
+  "notes": [],
+  "summary": {
+    "models_measured": 3,
+    "errors": 0,
+    "benchmark_duration_s": 59.6
+  }
+}

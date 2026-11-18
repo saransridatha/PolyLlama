@@ -1,0 +1,24 @@
+[Unit]
+Description=ModelSwitch local multi-model inference gateway
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=%i
+WorkingDirectory=/home/%i/Documents/modelSwitch
+EnvironmentFile=-/home/%i/Documents/modelSwitch/.env
+ExecStart=/home/%i/Documents/modelSwitch/scripts/start.sh
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+KillMode=mixed
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/%i/Documents/modelSwitch/data /home/%i/Documents/modelSwitch/vendor /home/%i/Documents/modelSwitch/app/static
+# If models live outside the repository, add them to ReadWritePaths/ReadOnlyPaths.
+
+[Install]
+WantedBy=multi-user.target

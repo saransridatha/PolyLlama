@@ -1,0 +1,11 @@
+model_list:
+  - model_name: modelswitch-auto
+    litellm_params:
+      model: openai/auto
+      api_base: http://127.0.0.1:8000/v1
+      api_key: os.environ/MODELSWITCH_API_KEY
+  - model_name: modelswitch-coding
+    litellm_params:
+      model: openai/coding
+      api_base: http://127.0.0.1:8000/v1
+      api_key: os.environ/MODELSWITCH_API_KEY

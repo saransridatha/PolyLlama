@@ -1,0 +1,43 @@
+# Runtime state and secrets
+.env
+.env.*
+!.env.example
+data/
+!data/.gitkeep
+secrets/
+*.db
+*.db-shm
+*.db-wal
+*.key
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Vendored / generated
+vendor/
+.cache/
+*.log
+reports/*.tmp
+models/*.gguf
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Build metadata
+frontend/tsconfig.tsbuildinfo
+*.tsbuildinfo
+.coverage
+coverage.xml

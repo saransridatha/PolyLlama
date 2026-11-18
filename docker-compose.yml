@@ -1,0 +1,33 @@
+services:
+  modelswitch:
+    build:
+      context: .
+      args:
+        LLAMA_REF: master
+    image: modelswitch:local
+    restart: unless-stopped
+    user: "${UID:-1000}:${GID:-1000}"
+    ports:
+      - "127.0.0.1:8000:8000"
+      - "127.0.0.1:8001:8001"
+    environment:
+      MS_PUBLIC_HOST: 0.0.0.0
+      MS_PUBLIC_PORT: "8000"
+      MS_PUBLIC_BASE_URL: http://127.0.0.1:8000
+      MS_ADMIN_HOST: 0.0.0.0
+      MS_ADMIN_PORT: "8001"
+      MS_ADMIN_BASE_URL: http://127.0.0.1:8001
+      MS_DATA_DIR: /data
+      MS_MODEL_ROOTS: /models
+      MS_LLAMA_SERVER_BIN: /opt/llama/bin/llama-server
+      MS_MAX_RESIDENT_MODELS: "1"
+      MS_DEFAULT_CONTEXT_LENGTH: "4096"
+    volumes:
+      - ./data:/data
+      - ./models:/models:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/healthz', timeout=3)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
